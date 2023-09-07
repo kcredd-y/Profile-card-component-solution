@@ -1,0 +1,148 @@
+:root {
+  --clr-cyan: hsl(185, 75%, 39%);
+  --clr-dark-blue: hsl(229, 23%, 23%);
+  --clr-gray-blue: hsl(227, 10%, 46%);
+  --clr-gray: hsl(0, 0%, 59%);
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --ff-Kumbh: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-position: right 40vw bottom 60vh, left 25vw top 50vh;
+  background-repeat: no-repeat;
+  background-color: var(--clr-cyan);
+
+  font-size: 1.125rem;
+  font-family: var(--ff-Kumbh);
+  color: var(--clr-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 9.3725rem 1.5625rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 8.75rem 14.6875rem;
+  height: 25rem;
+  width: 20.3125rem;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+.container-top {
+  background: url(./images/bg-pattern-card.svg);
+  position: relative;
+}
+
+.Victor-photo {
+  position: absolute;
+  top: 5.3125rem;
+  left: 6.152625rem;
+  border-radius: 50%;
+  border: 0.4rem solid white;
+}
+
+.container-bottom {
+  background-color: white;
+  text-align: center;
+  border-radius: 0 0 1rem 1rem;
+}
+
+h1 {
+  font-size: 1.125rem;
+  margin-top: 4.375rem;
+  font-weight: var(--fw-bold);
+}
+
+span {
+  color: var(--clr-gray);
+  padding-left: 0.375rem;
+  font-weight: var(--fw-regular);
+}
+
+p {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: var(--clr-gray);
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid hsla(0, 0%, 59%, 0.3);
+}
+
+.flex-group {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.c_flex {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.c_flex div:first-child {
+  font-weight: var(--fw-bold);
+}
+
+.c_flex div:last-child {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: var(--clr-gray);
+}
